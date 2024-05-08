@@ -43,7 +43,7 @@ APIs
 •	Documentation of integration strategy, workflows, and automation processes for future reference and scalability.
 
 ### Integration architecture design 
-Below is the proposed technology stack for the automation of the data loading into the customer data lake as well as for the efficient extraction of customer information from the essential applications for supporting customer service agents when attending to customer support tickets. <br>
+Below is the proposed technology stack for the automation of the data loading into the customer data lake as well as for the efficient extraction of customer information from the essential applications for supporting customer service agents when attending to customer support tickets. Workato's enterprise automation platform is used in this project for the integration process. <br>
 
 <img width="256" alt="Picture1" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/e7c0b305-8c0b-4f5e-8240-edf7bd7a48e2">
 
