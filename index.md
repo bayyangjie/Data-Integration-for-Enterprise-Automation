@@ -1,4 +1,4 @@
-## Project Objective
+## Project Objectives
 Based on a case study, to develop an integration strategy that helps to automate the loading of data from the following sources into the customer data lake. <br>
 
 1. Salesforce CRM (Cloud SaaS)
