@@ -49,40 +49,40 @@ Deliverables:
 ## Integration architecture design 
 Below is the proposed technology stack for the automation of the data loading into the customer data lake as well as for the efficient extraction of customer information from the essential applications for supporting customer service agents when attending to customer support tickets. Workato's enterprise automation platform is used in this project for the integration process. <br>
 
-<img width="256" alt="Picture1" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/e7c0b305-8c0b-4f5e-8240-edf7bd7a48e2">
+<img src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/e7c0b305-8c0b-4f5e-8240-edf7bd7a48e2" width="60%">
 
 #### ZENDESK <br>
 The function of ZENDESK is to fetch customer support tickets, agent activities, and customer interactions. It would also integrate with Salesforce CRM to provide agents with a comprehensive view of customer history and interactions. When a customer support ticket is triggered in ZENDESK, it can be in the form of a dispute case such as charges dispute or general support enquiries. <br>
 
-<img src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/16d43230-432f-48c0-8198-bfab16ff2b6e" width="500" height="600">
+<img src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/16d43230-432f-48c0-8198-bfab16ff2b6e" width="900" height="300">
 
 Formulas are employed in the connector to introduce logics for differentiating between general customer support tickets and tickets raised for charge dispute settlement. 
 
-<img width="252" alt="Picture3" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/5b4e679c-4d21-4539-929b-7dec171719e7"> <br>
-<img width="259" alt="Picture4" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/98d5e227-a3a2-475d-8623-e0f99187d9e3">
+<img width="70%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/5b4e679c-4d21-4539-929b-7dec171719e7"> <br>
+<img width="70%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/98d5e227-a3a2-475d-8623-e0f99187d9e3">
 
 #### Snowflake <br>
 Snowflake connector here loads customer data from Salesforce, Zendesk and Stripe into Snowflake’s data lake. Besides serving as a centralized storage point for aggregating customer data from Salesforce, Zendesk, Stripe and the shipping APIs, it also provides analytical and reporting capabilities allowing CosmicCart to gain insights into customer trends, preferences, and behavior.  Snowflake also integrates with Workato to automate the extraction, transformation, and loading (ETL) of customer data from source systems into the data lake. Once a new ticket is raised in ZENDESK, this inserts a new record in the Snowflake database after consolidating the information from the various sources. The ‘Table’ field refers to the database table where the new record will be inserted. The columns refer to the selected columns for the new data to be inserted into.
 
-<img width="276" alt="Picture5" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/cb5d7b79-28a7-440d-b3b5-b86365c43508">
+<img width="70%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/cb5d7b79-28a7-440d-b3b5-b86365c43508">
 
 #### Salesforce <br>
 The setup of the above Salesforce connector is designed such that when a customer raises a support ticket in Zendesk, customer service agents can retrieve detailed information about the associated case record in Salesforce. By using the requester's ID from Zendesk as the object ID, you can quickly retrieve the corresponding case details from Salesforce, providing agents with comprehensive information to address customer inquiries or issues effectively.
 
 This integration enables seamless data exchange between Zendesk and Salesforce, allowing for a unified view of customer interactions and support history. Customer service agents can access the details of salesforce cases directly from within Zendesk, streamlining their workflow and enhancing productivity.
 
-<img width="414" alt="Picture6" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/b604b388-c059-4907-a3c7-811488fd2702">
+<img width="70%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/b604b388-c059-4907-a3c7-811488fd2702">
 
 #### Stripe <br>
 The selection of 'Requester ID' from Zendesk and 'Account ID' from Salesforce implies integration between Zendesk and Salesforce within the CosmicCart ecosystem. It suggests that customer support interactions and data from Zendesk are being correlated with customer account information from Salesforce to facilitate charge searches in Stripe. By using the requester's ID from Zendesk and the account ID from Salesforce, customer service agents can quickly search for relevant charge transactions in Stripe based on the customer's support ticket context and associated account information.
 
-<img width="324" alt="Picture7" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/c2b948e6-c840-46c5-b75f-863ec688e50a">
+<img width="70%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/c2b948e6-c840-46c5-b75f-863ec688e50a">
 
 #### Retrieving charges history in Stripe <br>
 Following the search operation, the 'List charges in Stripe' connector is used to retrieve a list of charge transactions from Stripe that match the criteria specified in the previous step. These charge transactions represent payments made by customers on the CosmicCart platform. 
 This action enables access to detailed information about individual charges processed through the Stripe payment gateway. The selected fields such as Charge ID, Amount captured, Invoice ID, and Payment method specify the data attributes to be retrieved for each charge listed in Stripe. This setup can prove useful for example in the case of a charges dispute as well in the event of a charges dispute. 
 
-<img width="378" alt="Picture8" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/c3e20b81-ce9d-486b-add8-9e98b07365fe">
+<img width="70%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/c3e20b81-ce9d-486b-add8-9e98b07365fe">
 
 
 1.  Access to Transaction Details: By retrieving detailed information about charges, including Charge ID, Amount captured, Invoice ID, and Payment method, the setup provides access to essential transaction details. These details can be crucial when investigating and resolving charges disputes.
@@ -98,20 +98,20 @@ We connect to the REST API of Ninjavan in order to interact with it. In Workato,
 
 Based on Ninjavan’s API endpoint call for integration process function, the API URL for data retrieval is https://api-sandbox.ninjavan.co/sg. The data returned by the Ninjavan API here is of a JSON data type as well. 
 
-<img width="206" alt="Picture9" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/ad24209d-6620-4d14-885d-c86dc4aa2fd9">
+<img width="55%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/ad24209d-6620-4d14-885d-c86dc4aa2fd9">
 
 #### Connecting to REST API of Amazon RDS (Database management system)
 MySQL connector is used for connecting to the Amazon RDS via Amazon account credentials. A new row (record) is inserted into the Amazon database management system whenever a new ticket is raised.
 
-<img width="275" alt="Picture11" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/28e3830f-8b51-4396-aecd-c9d1bbda26b2">
+<img width="55%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/28e3830f-8b51-4396-aecd-c9d1bbda26b2">
 
 ‘Host’ refers to the location of the MySQL server to connect to. The host specifies the network address or hostname of the server where the MySQL database is hosted.
 
-<img width="269" alt="Picture12" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/6509d406-7e7d-4031-a70a-09d04c302421">
+<img width="55%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/6509d406-7e7d-4031-a70a-09d04c302421">
 
 Username and password refers to the account details of the Amazon RDS database management platform. Database refers to the name of the MySQL database to connect to.
 
-<img width="316" alt="Picture13" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/22adf8e4-c169-4e0a-a9c5-961b90b7dcd4">
+<img width="55%" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/22adf8e4-c169-4e0a-a9c5-961b90b7dcd4">
 
 #### Function of AMAZON RDS:
 1.	Data Integration: Workato helps to set up data pipelines or integration workflows to extract data from Salesforce, Stripe, Zendesk, and other sources, perform the necessary data transformations, and load it into Amazon RDS database. This allows consolidation of data from multiple sources into a single database for analysis, reporting, or other purposes.
