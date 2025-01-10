@@ -18,27 +18,27 @@ APIs
 7. Customer data lake using Snowflake
 
 # Proposed solutions
-1.	Reducing Average Handling Time for Customer Service Agents:
+Reducing Average Handling Time for Customer Service Agents:
 •	Integrate Salesforce CRM with Zendesk to provide agents with a unified view of customer information and interactions.
 •	Use Workato to automate the retrieval of customer data from Salesforce CRM and Zendesk, reducing the time agents spend manually searching for information.
 •	Implement automated responses for common customer queries using Zendesk macros or automated workflows triggered by specific events in Salesforce CRM.
-2.	Providing Comprehensive Customer View:
+Providing Comprehensive Customer View:
 •	Use Workato to synchronize customer data across the platforms involved (Salesforce, Zendesk, Stripe, AWS RDS, Shipping APIs) in ensuring agents have access to the latest information.
 •	Utilize Workato's data mapping and transformation capabilities to standardize customer data formats across systems.
 •	Implement real-time updates for customer interactions, ensuring agents have access to the most recent communications and transactions.
-3.	Automation of Data Loading to Customer Data Lake:
+Automation of Data Loading to Customer Data Lake:
 •	Set up scheduled data extraction workflows to pull data from source systems and load it into Snowflake data lake.
 •	Utilize Workato's data transformation capabilities to standardize data formats and ensure consistency across sources.
 •	Implement error handling and data validation processes to maintain data integrity and accuracy.
 •	Monitor data loading processes and performance metrics using Workato's analytics dashboard.
 
 ## Project scope and deliverables 
-1.	Project Scope:
+Project Scope:
 •	Integration of Salesforce CRM, AWS RDS, Zendesk, Stripe.com, Shipping APIs, and Snowflake data lake.
 •	Automation of data loading from various source systems to the Snowflake data lake.
 •	Implementation of workflows to reduce average handling time for customer service agents.
 •	Provision of a comprehensive view of each customer, including their history and interactions, for the benefit of customer service agents when handling customer ticket queries.
-2.	Deliverables:
+Deliverables:
 •	Integration workflows built using Workato to connect Salesforce CRM, AWS RDS, Zendesk, Stripe.com, Shipping APIs, and Snowflake data lake.
 •	Automated data loading processes from source systems to Snowflake data lake using Workato.
 •	Integration of generative AI platforms with Zendesk to provide AI-powered customer service capabilities.
@@ -54,7 +54,7 @@ Below is the proposed technology stack for the automation of the data loading in
 #### ZENDESK <br>
 The function of ZENDESK is to fetch customer support tickets, agent activities, and customer interactions. It would also integrate with Salesforce CRM to provide agents with a comprehensive view of customer history and interactions. When a customer support ticket is triggered in ZENDESK, it can be in the form of a dispute case such as charges dispute or general support enquiries. <br>
 
-<img width="339" alt="Picture2" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/16d43230-432f-48c0-8198-bfab16ff2b6e">
+<img src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/16d43230-432f-48c0-8198-bfab16ff2b6e" width="500" height="600">
 
 Formulas are employed in the connector to introduce logics for differentiating between general customer support tickets and tickets raised for charge dispute settlement. 
 
