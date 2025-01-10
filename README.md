@@ -1,25 +1,12 @@
-### Knowledge and Understanding
-1. Assess and select data integration and workflow automation approaches, based on 
-business and technology requirements.
-2. Design UI-based Automation and API-based Automation solutions for enterprise 
-environments.
-3. Construct API-based Automation workflows to solve business problems in enterprises 
-and enhance these workflows with Artificial Intelligence and Machine Learning.
-4. Create a scalable enterprise automation framework to achieve digital transformation in 
-enterprises and evaluate its success
+# Background
+The study here involves a company called CosmicCart, which is a mobile-first digital marketplace. It has experienced explosive growth over the past two years. However, the recent drop in customer satisfaction ratings has become an issue due to the customer service agents struggling to keep up with the exponential increase in their customer base. 
 
-### Key Skills
-1. Formulate data integration and automation workflows to drive digital transformation, 
-with Application Programming Interface (API), Robotic Process Automation (RPA), 
-Generative Artificial Intelligence and Machine Learning (ML).
-2. Construct a scalable enterprise integration and automation practice to solve real-life 
-business problems.
-3. Evaluate the success and outcomes of enterprise integration and automation initiatives 
-in enterprises.
+## Objectives
+* Reduce the average handling time for customer service agents.
+* Provide customer service agents with a comprehensive view of each customer, including their history and interactions.
+* Explore the potential benefits of using generative AI to enhance the productivity and efficiency of customer service agents in managing the increasing customer base.
 
-## Project Objectives
-Based on a case study, to develop an integration strategy that helps to automate the loading of data from the following sources into the customer data lake. <br>
-
+# Tools utilized
 1. Salesforce CRM (Cloud SaaS)
 2. Custom developed e-Commerce platform with REST APIs available to 
 access product information. (Hosted on AWS cloud)
@@ -30,8 +17,7 @@ access product information. (Hosted on AWS cloud)
 APIs
 7. Customer data lake using Snowflake
 
-### Proposed solution overview to meet the business objectives
-
+# Proposed solutions
 1.	Reducing Average Handling Time for Customer Service Agents:
 •	Integrate Salesforce CRM with Zendesk to provide agents with a unified view of customer information and interactions.
 •	Use Workato to automate the retrieval of customer data from Salesforce CRM and Zendesk, reducing the time agents spend manually searching for information.
@@ -46,8 +32,7 @@ APIs
 •	Implement error handling and data validation processes to maintain data integrity and accuracy.
 •	Monitor data loading processes and performance metrics using Workato's analytics dashboard.
 
-### Project scope and deliverables 
-
+## Project scope and deliverables 
 1.	Project Scope:
 •	Integration of Salesforce CRM, AWS RDS, Zendesk, Stripe.com, Shipping APIs, and Snowflake data lake.
 •	Automation of data loading from various source systems to the Snowflake data lake.
@@ -61,7 +46,7 @@ APIs
 •	Unified customer view dashboard in Zendesk, providing agents with comprehensive customer information.
 •	Documentation of integration strategy, workflows, and automation processes for future reference and scalability.
 
-### Integration architecture design 
+## Integration architecture design 
 Below is the proposed technology stack for the automation of the data loading into the customer data lake as well as for the efficient extraction of customer information from the essential applications for supporting customer service agents when attending to customer support tickets. Workato's enterprise automation platform is used in this project for the integration process. <br>
 
 <img width="256" alt="Picture1" src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/e7c0b305-8c0b-4f5e-8240-edf7bd7a48e2">
@@ -136,7 +121,6 @@ Username and password refers to the account details of the Amazon RDS database m
 3.	Data Analysis and Reporting: Amazon RDS can then be used in conjunction with analytical tools or business intelligence platforms to analyze and report on data from Salesforce, Stripe, Zendesk, and other sources. By querying the data stored in Amazon RDS database, it allows users to gain insights into customer behaviour, transaction patterns, support ticket trends, and more.
 
 ### Future enhancements
-
 1.	Real-Time Data Integration:
 •	Implement real-time data integration capabilities to ensure that the customer data lake is continuously updated with the latest information from source systems.
 •	Utilize change data capture (CDC) techniques to capture and replicate only the changed data from source systems to minimize latency and improve data freshness.
