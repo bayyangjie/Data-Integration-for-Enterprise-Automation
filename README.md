@@ -54,7 +54,7 @@ Below is the proposed technology stack for the automation of the data loading in
 #### ZENDESK <br>
 The function of ZENDESK is to fetch customer support tickets, agent activities, and customer interactions. It would also integrate with Salesforce CRM to provide agents with a comprehensive view of customer history and interactions. When a customer support ticket is triggered in ZENDESK, it can be in the form of a dispute case such as charges dispute or general support enquiries. <br>
 
-<img src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/16d43230-432f-48c0-8198-bfab16ff2b6e" width="900" height="300">
+<img src="https://github.com/bayyangjie/Foundation-to-Python-for-AI/assets/153354426/16d43230-432f-48c0-8198-bfab16ff2b6e" width="70%">
 
 Formulas are employed in the connector to introduce logics for differentiating between general customer support tickets and tickets raised for charge dispute settlement. 
 
